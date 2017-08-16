@@ -1,3 +1,7 @@
+body{
+  background-color:pink;
+  background-image: url(http://i.imgur.com/fH5u9FX.png);
+}
 .bodytext{
   color:black;
   font-size:18px
