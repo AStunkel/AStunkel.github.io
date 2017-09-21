@@ -5,8 +5,11 @@
   font-size:20px;
 }
 .body{
-  background-color:green;
+  background-color:black;
   background-image: url(https://i.imgur.com/dxlFYiq.png);
   background-repeat:repeat;
   border:1px solid;
+}
+.lead{
+  font-size:42;
 }
