@@ -4,11 +4,12 @@
 .h3{
   font-size:20px;
 }
-.body{
+.all{
   background-color:black;
   background-image: url(https://i.imgur.com/dxlFYiq.png);
   background-repeat:repeat;
   border:1px solid;
+  height:100%;
 }
 .lead{
   font-size:42;
