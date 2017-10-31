@@ -42,8 +42,18 @@
 			for (i=1; i<6; i++) {
 				document.write("<br>This is annoying loop num " + i);
 			}
-var userName = prompt ("Who is the President of the United States?");
-confirm ("Are you sure " +userName + " is the President of the United States?" );
+
+			var userAge = prompt("What's your favorite color?");
+			var ageIsCorrect = false;
+
+			while (ageIsCorrect == false) {
+			  if (confirm("You entered " + userAge + ". Is this correct?")) {
+			    ageIsCorrect = true;
+			    alert("That's a dumb color,  " + userAge + " is lame.");
+			  } else {
+			    userAge = prompt("WHAT IS YOUR FAVORITE COLOR!? GAWD!?@");
+			  }
+			}
 
 			</script>
 		</body>
