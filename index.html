@@ -1,65 +1,51 @@
 <!DOCTYPE html>
 <html>
-	<head>
-		<title>JavaScript is annoying to learn</title>
-	</head>
-		<body>
-			<script>
+  <head>
+    <link type='text/css' rel='stylesheet' href='style.css'/>
+    <title>PHP!</title>
+  </head>
+  <body>
+    <img src="http://i1061.photobucket.com/albums/t480/ericqweinstein/php-logo_zps408c82d7.png"/>
+    <div class="header"><h1>
+      <?php
+      $welcome = "Let's get started with PHP!";
+      echo $welcome;
+      ?>
+    </h1></div>
+    <p><strong>Generate a list:</strong>
+      <?php
+      for ($number = 1; $number <= 10; $number++) {
+        if ($number <= 9) {
+            echo $number . ", ";
+        } else {
+            echo $number . "!";
+        }
+      }; ?>
+    </p>
+    <p><strong>Things you can do:</strong>
+      <?php
+        $things = array("Talk to databases",
+        "Send cookies", "Evaluate form data",
+        "Build dynamic webpages");
+        foreach ($things as $thing) {
+            echo "<li>$thing</li>";
+        }
 
-			var one = "This is my first var,";
-			var two = " and this is my second var.<br>";
-			var sentence = one + two;
-			document.write (sentence);
+        unset($thing);
+      ?>
+    </p>
+    <p><strong>This jumbled sentence will change every time you click Submit!<strong></p>
+    <p>
+      <?php
+        $words = array("the ", "quick ", "brown ", "fox ",
+        "jumped ", "over ", "the ", "lazy ", "dog ");
+        shuffle($words);
+        foreach ($words as $word) {
+            echo $word;
+        };
 
-			var num1 = 1;
-			var num2 = 2;
-			var num3 = 5;
-			var total = num1 + num2 + num3 + "<br>";
-			document.write(total);
-
-			var alpha = "OneTwoThree";
-			var length = alpha.length;
-			document.write(length);
-
-			var beta = "LearningASubstring";
-			var result = beta.substring(0,18);
-			document.write(result);
-
-			var a = new Array(7);
-			a[0] = "cat";
-			a[1] = "dog";
-			a[2] = "cats and dogs are cute"
-			document.write (a[2]);
-
-			var b = new Array( "mouse", "bird", 34, true);
-			document.write(a[1]);
-
-			var x= "ILoveYouScott";
-			if (x =="ILoveYouScot") {
-					alert(x);
-			}
-
-			for (i=1; i<6; i++) {
-				document.write("<br>This is annoying loop num " + i);
-			}
-
-			var userAge = prompt("What's your favorite color?");
-			var ageIsCorrect = false;
-
-			while (ageIsCorrect == false) {
-			  if (confirm("You entered " + userAge + ". Is this correct?")) {
-			    ageIsCorrect = true;
-			    alert("That's a dumb color,  " + userAge + " is lame.");
-			  } else {
-			    userAge = prompt("WHAT IS YOUR FAVORITE COLOR!? GAWD!?@");
-			  }
-			}
-var comboArray1 = ["This", "Is", "Array", "One"];
-var comboArray2 = ["Das", "ist", "array", "zwei"];
-var arrayOfArrays = [comboArray1, comboArray2];
-document.write(arrayOfArrays[1][2])
-
-
-			</script>
-		</body>
+        unset($word);
+      ?>
+    </p>
+  </body>
 </html>
